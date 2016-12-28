@@ -18,7 +18,11 @@ var mainState = {
 
         behaviorPlugin.enable(this.player); // enable the plugin on the player
 
-        this.player.behaviors.set('platformer', Phaser.Behavior.Platformer);
+        this.player.behaviors.set('platformer', Phaser.Behavior.Platformer, {
+            velocity: 300,
+            jumpStrength: 450,
+            gravity: 1300
+        });
 
         // Map Builder
         this.walls = game.add.group();
