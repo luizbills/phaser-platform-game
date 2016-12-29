@@ -1,6 +1,8 @@
 // based on http://www.lessmilk.com/tutorial/2d-platformer-phaser
 var mainState = {
     preload: function () {
+        game.load.crossOrigin = 'anonymous';
+
         game.load.image('player', 'assets/player.png');
         game.load.image('wall', 'assets/wall.png');
         game.load.image('coin', 'assets/coin.png');
